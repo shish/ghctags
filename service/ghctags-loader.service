@@ -1,0 +1,13 @@
+[Unit]
+Description=ShishNet GHCtags Loader
+
+[Service]
+ExecStart=/data/sites/ghctags.shishnet.org/run/run-loader
+Restart=always
+
+#Type=notify
+#NotifyAccess=all
+#WatchdogSec=60
+
+[Install]
+WantedBy=multi-user.target

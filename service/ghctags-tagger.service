@@ -1,0 +1,13 @@
+[Unit]
+Description=ShishNet GHCtags Tagger
+
+[Service]
+ExecStart=/data/sites/ghctags.shishnet.org/run/run-tagger
+Restart=always
+
+#Type=notify
+#NotifyAccess=all
+#WatchdogSec=60
+
+[Install]
+WantedBy=multi-user.target
