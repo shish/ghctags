@@ -1,4 +1,0 @@
-#!/bin/sh
-ulimit -v 512000
-cd /data/sites/ghctags.shishnet.org/ghctags
-exec chpst -u shish:shish ../venv/bin/ghctags-fetcher

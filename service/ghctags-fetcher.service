@@ -2,7 +2,10 @@
 Description=ShishNet GHCtags Fetcher
 
 [Service]
-ExecStart=/data/sites/ghctags.shishnet.org/run/run-fetcher
+WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
+User=shish
+Group=shish
+ExecStart=../venv/bin/ghctags-fetcher
 Restart=always
 
 #Type=notify

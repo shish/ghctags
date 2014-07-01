@@ -2,7 +2,13 @@
 Description=ShishNet GHCtags Web
 
 [Service]
-ExecStart=/data/sites/ghctags.shishnet.org/run/run-web
+WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
+User=shish
+Group=shish
+ExecStart=/bin/sh -c '\
+	sleep 3 && sd_watcher --url http://127.0.0.1:8805/ --interval 30 --exit & \
+	../venv/bin/pserve production.ini \
+'
 Restart=always
 
 Type=notify

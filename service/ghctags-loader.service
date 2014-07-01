@@ -2,7 +2,10 @@
 Description=ShishNet GHCtags Loader
 
 [Service]
-ExecStart=/data/sites/ghctags.shishnet.org/run/run-loader
+WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
+User=shish
+Group=shish
+ExecStart=../venv/bin/ghctags-loader
 Restart=always
 
 #Type=notify

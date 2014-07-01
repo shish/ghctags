@@ -2,7 +2,10 @@
 Description=ShishNet GHCtags Tagger
 
 [Service]
-ExecStart=/data/sites/ghctags.shishnet.org/run/run-tagger
+WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
+User=shish
+Group=shish
+ExecStart=../venv/bin/ghctags-tagger
 Restart=always
 
 #Type=notify
