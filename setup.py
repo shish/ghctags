@@ -13,6 +13,7 @@ requires = [
     'pyramid_mako',
     'pyramid_debugtoolbar',
     'waitress',
+    'pika',
     ]
 
 setup(name='ghctags',
