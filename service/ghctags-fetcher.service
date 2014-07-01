@@ -5,7 +5,7 @@ Description=ShishNet GHCtags Fetcher
 WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
 User=shish
 Group=shish
-ExecStart=../venv/bin/ghctags-fetcher
+ExecStart=/bin/sh -c 'exec ../venv/bin/ghctags-fetcher'
 Restart=always
 
 #Type=notify

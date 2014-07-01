@@ -5,7 +5,7 @@ Description=ShishNet GHCtags Tagger
 WorkingDirectory=/data/sites/ghctags.shishnet.org/ghctags
 User=shish
 Group=shish
-ExecStart=../venv/bin/ghctags-tagger
+ExecStart=/bin/sh -c 'exec ../venv/bin/ghctags-tagger'
 Restart=always
 
 #Type=notify
