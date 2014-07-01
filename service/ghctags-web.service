@@ -7,7 +7,7 @@ User=shish
 Group=shish
 ExecStart=/bin/sh -c '\
 	sleep 3 && sd_watcher --url http://127.0.0.1:8805/ --interval 30 --exit & \
-	../venv/bin/pserve production.ini \
+	exec ../venv/bin/pserve production.ini \
 '
 Restart=always
 
